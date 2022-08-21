@@ -32,7 +32,12 @@ public class PaymentRequestValidator {
 		if(paymentRequest.getClientId() ==null || " ".equals(paymentRequest.getClientId) ){
 			
 		throw new PaymentServiceException("ps002", "invlaid client id");	
-		}	
+		}
+
+		if(paymentRequest.getCvv() ==null || " ".equals(paymentRequest.getCvv()) ){
+			
+		throw new PaymentServiceException("ps003", "invlaid cvv id");	
+		}		
 
 
 	}
