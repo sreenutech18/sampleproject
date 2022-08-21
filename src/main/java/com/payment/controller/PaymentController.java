@@ -57,7 +57,7 @@ public class PaymentController {
 		//4. prepare the response and send to consumer/client
 		
 		
-		return null;
+		return response;
 	}
 	
 	@ResponseBody
@@ -68,8 +68,8 @@ public class PaymentController {
 		//2. parse/read the file and read line by line from file, split the file into multiple records
 		//3. prepare the java object
 		
-		
-		return null;
+		PaymentResponse response = paymentService.doPayments(paymentRequest);
+		return response;
 		
 		
 	}
