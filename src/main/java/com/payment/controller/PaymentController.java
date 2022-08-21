@@ -78,13 +78,15 @@ public class PaymentController {
 	@RequestMapping(value="/payment/{mobileNum}/{paymentdate}", method=RequestMethod.GET,
 					produces="application/json")
 	public String paymentStatus(@PathVariable("mobileNum") String mobileNum, 
-								@PathVariable("paymentdate") String paymentDate) {
+				    @PathVariable("paymentdate") String paymentDate {
+				    @Validated @RequestHeader("client-id") String clientId,
+					@Validated @RequestHeader("requestId") String requestId,
+					@Validated @RequestHeader("messageTS") String messageTS)
 		
-		String status = null;
 		
 			
 		
-		return status;
+		return null;
 	
 		
 	}
